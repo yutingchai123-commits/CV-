@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>柴钰婷 | 品牌与内容营销个人主页</title>
+  <style>
+    :root{
+      --bg:#f5f4ef;
+      --paper:#fbfaf6;
+      --ink:#171717;
+      --muted:#66645d;
+      --line:#ddd8cf;
+      --soft:#efebe3;
+      --accent:#202020;
+      --max:1120px;
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+      background:linear-gradient(180deg,#f6f4ee 0%,#f3f0e8 100%);
+      color:var(--ink);
+      line-height:1.75;
+      letter-spacing:.01em;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 20px 68px}
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;gap:16px;
+      padding:14px 0 22px;border-bottom:1px solid var(--line);
+    }
+    .brand{font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+    .links{display:flex;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+    .links a:hover{color:var(--ink)}
+
+    .hero{
+      display:grid;grid-template-columns:1.28fr .72fr;gap:28px;
+      padding:44px 0 30px;border-bottom:1px solid var(--line);
+    }
+    .eyebrow{
+      display:inline-block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+      color:var(--muted);margin-bottom:18px;
+    }
+    h1{
+      margin:0;font-size:64px;line-height:1.02;letter-spacing:-.045em;font-weight:700;
+    }
+    .hero p{margin:18px 0 0;color:var(--muted);font-size:17px;max-width:720px}
+    .intro-strong{color:var(--ink)}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 16px;border-radius:999px;border:1px solid var(--ink);
+      font-size:14px;font-weight:600;background:var(--ink);color:#fff;
+    }
+    .btn.alt{background:transparent;color:var(--ink);border-color:var(--line)}
+    .side-card{
+      background:var(--paper);border:1px solid var(--line);border-radius:20px;
+      padding:22px;align-self:end;
+    }
+    .side-card strong{display:block;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+    .side-card p{margin:0;color:var(--muted);font-size:14px}
+
+    .stats{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:24px 0 6px;
+    }
+    .stat{padding:18px 16px 16px;border-top:1px solid var(--ink)}
+    .stat strong{display:block;font-size:28px;line-height:1.1;margin-bottom:6px}
+    .stat span{font-size:13px;color:var(--muted)}
+
+    section{padding:34px 0;border-bottom:1px solid var(--line)}
+    .section-head{
+      display:grid;grid-template-columns:.55fr 1.45fr;gap:24px;margin-bottom:22px;
+    }
+    .section-kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-top:6px}
+    .section-title{margin:0;font-size:34px;line-height:1.16;letter-spacing:-.03em}
+    .section-desc{margin:10px 0 0;color:var(--muted);max-width:760px}
+
+    .grid-3,.grid-2,.cards{display:grid;gap:16px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .card{
+      background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:22px;
+    }
+    .card .mini{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+    .card h3{margin:0 0 10px;font-size:22px;line-height:1.2}
+    .card p{margin:0;color:var(--muted);font-size:15px}
+
+    .timeline{display:grid;gap:14px}
+    .item{
+      display:grid;grid-template-columns:220px 1fr;gap:18px;padding:20px 0;border-top:1px solid var(--line);
+    }
+    .item:first-child{border-top:none;padding-top:0}
+    .meta{font-size:13px;color:var(--muted)}
+    .item h3{margin:0 0 8px;font-size:22px}
+    .item ul{margin:0;padding-left:18px}
+    .item li{margin:8px 0;color:var(--muted)}
+
+    .tag-wrap{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .tag{padding:8px 12px;border-radius:999px;border:1px solid var(--line);font-size:13px;background:var(--paper);color:var(--muted)}
+
+    .quote{
+      padding:28px;border-radius:24px;background:var(--ink);color:#fff;
+    }
+    .quote p{margin:0;font-size:28px;line-height:1.35;letter-spacing:-.02em}
+    .quote span{display:block;margin-top:16px;color:rgba(255,255,255,.68);font-size:14px}
+
+    .contact{
+      display:grid;grid-template-columns:1fr 1fr;gap:16px;
+    }
+    .contact .card strong{display:block;margin-bottom:8px;font-size:16px}
+    .footer{padding-top:22px;color:var(--muted);font-size:13px}
+
+    @media (max-width: 960px){
+      .hero,.section-head,.grid-3,.grid-2,.contact,.stats,.item{grid-template-columns:1fr}
+      h1{font-size:46px}
+      .wrap{padding:24px 18px 56px}
+      .nav{align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">Chai Yuting</div>
+      <div class="links">
+        <a href="#about">关于我</a>
+        <a href="#experience">经历</a>
+        <a href="#ai-marketing">AI × 营销</a>
+        <a href="#contact">联系</a>
+      </div>
+    </div>
+
+    <section class="hero" id="about">
+      <div>
+        <span class="eyebrow">Brand Marketing · Content Strategy · AI-native Thinking</span>
+        <h1>用内容建立理解，<br>用 AI 放大表达。</h1>
+        <p>
+          我是柴钰婷，南洋理工大学语言学硕士在读。我的优势不只是在于内容表达，
+          也在于把<span class="intro-strong">研究洞察、跨文化沟通、品牌语境与 AI 工具</span>连接起来，做更清晰、更有审美、也更有效的传播。
+        </p>
+        <p>
+          我希望进入品牌、内容、市场或传播相关岗位，在真实的用户场景中，把想法落成可执行的内容与营销方案。
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="mailto:chaiyuting0901@163.com">联系我</a>
+          <a class="btn alt" href="#contact">主页链接位</a>
+        </div>
+      </div>
+      <div class="side-card">
+        <strong>个人标签</strong>
+        <p>语言学 / 内容表达 / 用户洞察 / AI 创意工作流 / 跨文化传播 / 品牌感知</p>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="stat"><strong>IELTS 7.5</strong><span>英语流利，具备跨文化表达能力</span></div>
+      <div class="stat"><strong>1000+</strong><span>3 个月独立运营小红书账号涨粉</span></div>
+      <div class="stat"><strong>1.5 万+</strong><span>单篇内容最高曝光量</span></div>
+      <div class="stat"><strong>30%</strong><span>平均互动率提升约 30%</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">Positioning</div>
+        <div>
+          <h2 class="section-title">我适合的，不是单一执行岗，而是兼具内容、洞察与新工具意识的复合型岗位。</h2>
+          <p class="section-desc">相比只强调“会做内容”或“会用 AI”，我更想呈现的是一种工作方式：先理解用户与语境，再组织表达，最后借助工具把效率和创意一起放大。</p>
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="mini">01</div>
+          <h3>会做洞察</h3>
+          <p>具备语料分析、问卷研究、访谈与质性研究经历，习惯先看问题结构和用户需求，再进入表达与传播阶段。</p>
+        </div>
+        <div class="card">
+          <div class="mini">02</div>
+          <h3>会做内容</h3>
+          <p>有社媒运营、文书内容优化与传播策划经验，能够把复杂信息转化为更有吸引力、更有逻辑的内容形式。</p>
+        </div>
+        <div class="card">
+          <div class="mini">03</div>
+          <h3>会用 AI 放大创意</h3>
+          <p>关注生成式 AI、AI 智能体与营销工作流的结合，能够把 AI 用于创意发想、内容生成、结构梳理与轻量原型表达。</p>
+        </div>
+      </div>
+      <div class="tag-wrap">
+        <span class="tag">品牌传播</span>
+        <span class="tag">内容策略</span>
+        <span class="tag">用户洞察</span>
+        <span class="tag">社媒运营</span>
+        <span class="tag">AI 创意工作流</span>
+        <span class="tag">跨文化沟通</span>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-head">
+        <div class="section-kicker">Selected Experience</div>
+        <div>
+          <h2 class="section-title">代表经历</h2>
+          <p class="section-desc">我做过研究、做过内容，也接触过广告执行与空间表达。这些经历最后都指向同一件事：如何让信息更有效地被理解和接受。</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="item">
+          <div class="meta">2025.04 — 2026.03<br>内容运营与文书负责人</div>
+          <div>
+            <h3>南学长文书工作室</h3>
+            <ul>
+              <li>独立运营小红书品牌账号，3 个月内粉丝增长至 1000+，单篇笔记最高曝光量达 1.5 万+。</li>
+              <li>围绕留学申请场景策划内容选题，并结合后台数据持续优化阅读、收藏、转化等关键指标。</li>
+              <li>通过评论区与私信整理用户需求，形成需求库与常见问题手册，提升内容与服务响应效率。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="item">
+          <div class="meta">2025.02 — 2025.06<br>展览与广告设计实习生</div>
+          <div>
+            <h3>森枫广告有限公司</h3>
+            <ul>
+              <li>参与展会展位及门店改造项目，完成二维图纸、三维可视化及视觉物料支持。</li>
+              <li>协助项目前期调研与方案分析，搜集同类品牌展陈案例，为功能布局与视觉表达提供参考。</li>
+              <li>在执行过程中建立对空间、视觉和品牌呈现一致性的理解。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="item">
+          <div class="meta">2026.01 — 2026.04<br>项目负责人</div>
+          <div>
+            <h3>低资源语言语料工程与语言数据分析</h3>
+            <ul>
+              <li>独立负责语料资源调研、子语料抽取与可复现处理脚本开发，形成标准化标注数据子集。</li>
+              <li>使用 Python、R 进行语料解析、统计分析与可视化，支持后续 POS tagging 模型开发。</li>
+              <li>完成标注规则梳理、人工修订与质量检查，输出项目技术文档。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-marketing">
+      <div class="section-head">
+        <div class="section-kicker">AI × Marketing</div>
+        <div>
+          <h2 class="section-title">我感兴趣的 AI × 广告营销方向</h2>
+          <p class="section-desc">我想把“会用 AI”进一步升级为“理解 AI 如何改变营销工作流、品牌表达与用户关系”。</p>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <div class="mini">Frontier 01</div>
+          <h3>AI 原生内容工作流</h3>
+          <p>把创意发想、文案生成、内容重组、多版本测试和复盘分析放进同一个工作流里，让内容生产更高效，也更有策略连续性。</p>
+        </div>
+        <div class="card">
+          <div class="mini">Frontier 02</div>
+          <h3>个性化与场景化传播</h3>
+          <p>基于不同用户需求、情绪与平台语境，输出更贴近具体人群的表达方式，而不是一条信息面向所有人。</p>
+        </div>
+        <div class="card">
+          <div class="mini">Frontier 03</div>
+          <h3>AI 智能体辅助营销执行</h3>
+          <p>关注 AI 智能体在资料整理、竞品扫描、内容初稿、投放建议和营销项目协同中的应用潜力。</p>
+        </div>
+        <div class="card">
+          <div class="mini">Frontier 04</div>
+          <h3>品牌感与效率并存</h3>
+          <p>我在意的不是只用 AI 提高速度，而是在更快产出的同时，仍保持品牌语言、视觉调性与内容质感的一致性。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quote">
+        <p>我希望成为那种既能理解用户、也能组织表达，还愿意尝试新工具的人。</p>
+        <span>Research-minded, content-driven, and AI-aware.</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <div class="section-kicker">Contact</div>
+        <div>
+          <h2 class="section-title">联系我</h2>
+          <p class="section-desc">这个页面可以作为你的简历个人主页。上线后，把公开链接填到简历“个人主页超链接”一栏即可。</p>
+        </div>
+      </div>
+      <div class="contact">
+        <div class="card">
+          <strong>邮箱</strong>
+          <p>chaiyuting0901@163.com</p>
+        </div>
+        <div class="card">
+          <strong>电话</strong>
+          <p>+86-15052285977</p>
+        </div>
+      </div>
+      <div class="footer">© 柴钰婷 · Minimal Portfolio Page</div>
+    </section>
+  </div>
+</body>
+</html>
